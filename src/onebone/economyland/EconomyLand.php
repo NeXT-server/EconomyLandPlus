@@ -159,6 +159,10 @@ class EconomyLand extends PluginBase implements Listener{
 	public function onCommand(CommandSender $sender, Command $cmd, string $label, array $param) : bool{
 		switch($cmd->getName()){
 			case "lands": //土地保護 有無 設定
+			if(!$sender->isOp()){
+				$sender->sendMessage("§cこのコマンドを実行する権限がありません");
+				break;
+			}
 			$sub = array_shift($param);
 			switch($sub){
 				case "on":
