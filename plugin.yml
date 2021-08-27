@@ -58,7 +58,7 @@ permissions:
         default: true
        economyland.command.land.move:
         description: Allows player to move to other land
-        default: true
+        default: op
        economyland.command.land.list:
         description: Allows player to see list of lands
         default: true
